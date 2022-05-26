@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 
+	<title> Analyseur CSV </title>
+	
+	<script type="text/javascript" src = "projet.js"></script>
+	<style>
+		* {
+			padding: 0.5%;
+		}
+		td {
+			padding: 2%;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h1> Fichiers CSV </h1>
+		<br>
+	</center>
+	
+	<td>
+		<span class="glyphicon glyphicon-file"></span> Sélectionnez un fichier : 
+		<input id = "file" type="file" onchange="test.CSVFile(event)"><br><br>
+	</td>
+	
+	<input type="text" placeholder="Numéro de la colonne" id="input">
+    <button type="button" onclick="getValue()" class="btn btn-light"> OK </button><br><br>
+	<button type="button" onclick="sum(input)" class="btn btn-light"> Somme </button>
+	<button type="button" onclick="mean(input)" class="btn btn-light"> Moyenne </button>
+	<button type="button" onclick="mediane(input)" class="btn btn-light"> Médiane </button>
+	<button type="button" onclick="min(input)" class="btn btn-light"> Min </button>
+	<button type="button" onclick="max(input)" class="btn btn-light"> Max </button>
+	<button type="button" onclick="decimal(input)" class="btn btn-light"> Décimal </button>
+	<button type="button" onclick="binary(input)" class="btn btn-light"> Décimal => Binaire </button>
+	<button type="button" onclick="octal(input)" class="btn btn-light"> Décimal => Octal </button>
+	<button type="button" onclick="hexadecimal(input)" class="btn btn-light"> Décimal => Héxadécimal </button>
+    <br><br>
+	
+    <table>
+		<tr>		
+			<td><p id="text1"></p></td>
+			<td><p id="text2"></p></td>
+		</tr>
+	</table>
+</body>
+</html>
